@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = Number.parseInt(prompt("Enter a num:"));
+        let temp = num;
+        let rem = 0;
+        while (num > 0) {
+            rem = num % 10 + rem * 10;
+            num = Number.parseInt(num/10);
+        }
+        if(temp == rem){
+            console.log("The num "+temp+" is palindrome.");
+        }
+        else{
+            console.log("The num "+temp+" is not palindrome.");
+        }
+    </script>
+</body>
+
+</html>

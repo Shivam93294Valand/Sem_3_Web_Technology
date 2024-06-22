@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = Number.parseInt(prompt("Enter a num: "));
+        let temp = num;
+        let count = 0, rem = 0, ans = 0;
+        while (num>0) {
+            count++;
+            num =Math.floor(num/10);
+        }
+        num = temp;
+        while (num > 0) {
+            rem = num % 10;
+            ans = Math.pow(rem, count) + ans;
+            num = Math.floor(num / 10);
+        }
+        if (ans == temp) {
+            console.log("The number " + temp + " is Armstrong.")
+        }
+        else {
+            console.log("The number " + temp + " is not Armstrong.")
+        }
+    </script>
+</body>
+
+</html>
